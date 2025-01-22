@@ -1,128 +1,161 @@
-/* General Styles */
+```css
+/* Reset some default styles */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
+/* General Styles */
 body {
-    line-height: 1.6;
-    background-color: #fdfdfd;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
 }
 
-header {
+/* Header Style */
+.nav-header {
+    background-color: #111;
+    padding: 20px;
+}
+
+/* Navigation Menu Styles */
+.menu-nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    justify-content: center;
 }
 
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #333;
-}
-
-nav ul {
-    display: flex;
+.nav-menu {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
-nav ul li {
-    margin: 0 10px;
+/* Menu Item Styles */
+.nav-menu li {
+    margin: 0 15px;
 }
 
-nav ul li a {
+.nav-menu li a {
     text-decoration: none;
-    color: #333;
-    font-size: 1em;
-    transition: color 0.3s;
+    color: white;
+    font-size: 18px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #007bff;
+.nav-menu li a:hover {
+    opacity: 1;
 }
 
-.subscribe-btn {
-    background: #ff7b54;
-    color: #fff;
-    padding: 5px 15px;
-    border-radius: 5px;
-    text-transform: uppercase;
-}
-
-.subscribe-btn:hover {
-    background: #ff5722;
-}
-
-/* Section Styles */
-.section {
-    padding: 50px 20px;
+/* Header styling for the top section */
+.header {
+    background: url('your-image-url.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
     text-align: center;
-    background: #f9f9f9;
-    border-bottom: 1px solid #ddd;
+    position: relative;
 }
 
-.section:nth-child(even) {
-    background: #fff;
+.container {
+    position: relative;
+    z-index: 2;
 }
 
-.section h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #333;
+/* Header Container */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Space between logo, menu, and button */
+    align-items: center; /* Center items vertically */
 }
 
-.section p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: #666;
+/* Logo Style */
+.logo img {
+    max-height: 50px; /* Adjust based on your design */
 }
 
-.cta-btn {
-    text-decoration: none;
-    background: #007bff;
+/* Book Me Button Style */
+.book-button a {
+    background-color: #f24e1e; /* Change to preferred color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Spacing in the button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Smooth change on hover */
+}
+
+.book-button a:hover {
+    background-color: #d4431a; /* Darker shade on hover */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #f0a500;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.cta-button {
+    background-color: #ff4081;
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1em;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
     transition: background 0.3s;
 }
 
-.cta-btn:hover {
-    background: #0056b3;
+.cta-button:hover {
+    background-color: #e91e63;
 }
 
-/* Subscribe Section */
-.subscribe-section {
-    background: #ffecd2;
-    padding: 50px 20px;
-    text-align: center;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .nav-header {
+        padding: 10px;
+    }
+
+    .menu-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
 }
 
-.subscribe-section h1 {
-    color: #333;
-}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
 
-.subscribe-section p {
-    color: #555;
-}
-
-.subscribe-section .cta-btn {
-    background: #ff7b54;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px 20px;
-    background: #333;
-    color: #fff;
+    h2 {
+        font-size: 2rem;
+    }
 }
